@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* 상단헤더서식 */
+header{
+  width:150px;
+  height:100%;
+  position:fixed;
+  left:0px;top:0px;
+  background:rgba(0,0,0,.7);
+  z-index:9999;
+}
+
+header > h1{
+  text-align:center;
+  padding-top:100px;
+  /* position:relative;
+  top:100px; */
+  color:#fff;
+  font-size:30px;
+}
+
+/* 내비게이션 서식 */
+.gnb{
+  padding-top:100px;
+  text-align:center;
+}
+.gnb > ul{}
+.gnb > ul > li{
+  text-align:center;
+  line-height:40px;
+}
+.gnb > ul > li > a{
+  font-family: "Noto Sans KR";
+  font-size:16px;
+  text-transform: uppercase;
+  color:#fff;
+  transition:0.5s;
+}
+
+/* 해당 콘텐츠가 보일때 적용되는 메뉴서식 */
+.gnb > ul > li > a.on{font-size:20px !important;}
+.gnb > ul > li:first-child > a.on{color:rgb(0, 102, 255);}
+.gnb > ul > li:nth-child(2) > a.on{color:rgb(255, 255, 255);}
+.gnb > ul > li:nth-child(3) > a.on{color:#ff0;}
+.gnb > ul > li:last-child > a.on{color:#ccc;}
+
+/* 메인서식 */
+#con{
+  width:400%;height:100vh;
+  display:flex; /* 자식요소인 section 가로배치 */
+  position:absolute;
+  top:0px;left:0px;
+}
+#con section{
+  width:100%;height:100vh;
+  position:relative;
+  background-position:right center;
+}
+#con section h2{
+  position:absolute;
+  top:200px;left:180px;
+  font-size:30px;
+  font-family: "Noto Sans KR";
+  font-weight:bold;
+}
+#sec01{background:url('../images/cooper.jpg');}
+#sec01 > h2{color:rgb(0, 102, 255);}
+
+#sec02{background:url('../images/tesla.jpg');}
+#sec02 > h2{color:#fff;}
+
+#sec03{background:url('../images/lamborghini.jpg');}
+#sec03 > h2{color:#ff0;}
+
+#sec04{background:url('../images/porsche.jpg');}
+#sec04 > h2{color:#ccc;}
+
+/* 스크롤값 표시해주는 서식 */
+.status{
+  position:fixed;
+  z-index:1200;
+  right:50px;top:50px;
+  font-size:30px;color:#fff;
+  font-weight:bold;
+}
+
+/*  푸터영역 서식 */
+footer{
+  /* width:100%; */
+  width:calc(100% - 150px); /* 전체크기에서 150을 뺀 나머지값을 구해줌*/
+  position:fixed;
+  bottom:0px;left:150px;
+  background:rgba(0,0,0,.7);
+}
+footer > address{
+  line-height:50px;
+  text-align:center;
+  color:#fff;
+  font-family: "Noto Sans KR";
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 offset메서드를 활용한 가로스크롤 레이아웃</title>
+  <!-- 초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <link href="./css/base.css" rel="stylesheet" type="text/css">
+  <link href="./css/layout.css" rel="stylesheet" type="text/css">
+
+  <!-- 공급업체 접두사 생략해주는 스크립트 소스 -->
+  <script src="./script/prefixfree.min.js"></script>
+
+  <!-- 제이쿼리 라이브러리 연결하기  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="./script/main.js"></script>
+
+</head>
+<body>
+  <span class="status"></span>
+
+  <!-- 상단헤더영역 -->
+  <header>
+    <h1>상단로고</h1>
+    <nav class="gnb">
+      <ul>
+        <li><a href="#sec01" title="">mini cooper</a></li>
+        <li><a href="#sec02" title="">tesla</a></li>
+        <li><a href="#sec03" title="">lamborghini</a></li>
+        <li><a href="#sec04" title="">porsche</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 콘텐츠영역 -->
+  <main id="con">
+    <section id="sec01">
+      <h2>Mini Cooper</h2>
+    </section>
+    
+    <section id="sec02">
+      <h2>Tesla</h2>
+    </section>
+
+    <section id="sec03">
+      <h2>Lamborghini</h2>
+    </section>
+
+    <section id="sec04">
+      <h2>Porsche</h2>
+    </section>
+  </main>
+
+  <!-- 푸터영역 -->
+  <footer>
+    <address>
+      Copyright&copy;2022 가로스크롤 레이아웃 allrights reserved.
+    </address>
+  </footer>
+
+</body>
+</html>
