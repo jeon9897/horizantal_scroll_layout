@@ -1,9 +1,12 @@
 $(document).ready(function(){
-  
+  window.addEventListener("load", function() {
+    document.addEventListener("mousewheel");
+  });
+
   $(window).scroll(function(){
     let sPos = $(this).scrollLeft(); //가로스크롤값 변수에 담기
     $('.status').html(sPos); //스크롤값 출력하기
-  });
+
 
   //각각의 메뉴를 클릭시
   $('.gnb li a').click(function(){
@@ -26,6 +29,16 @@ $(document).ready(function(){
   });
 
   $('main section').each(function(){
+    let scrolls = $(window).scrollLeft();  
+    $('.status').html(scrolls); //화면에 출력하기
+
+    let s_Idx = $(this).index();
+
+    let nav = $('.gnb ul li a');
+    if(scrolls >= $('section').eq(s_Idx).offset().left){ 
+      nav.eq(s_Idx).addClass('on').parent().siblings().find('a').removeClass('on'); 
+    }
+
     // 개별적으로 Wheel 이벤트 적용
     $(this).on('mousewheel',function(e){
       
@@ -81,6 +94,8 @@ $(document).ready(function(){
           //화면 이동 0.3초(300)
           $("html,body").stop().animate({scrollLeft : moveTop + "px"}, 300, 'easeOutQuint');
       });
-    });
+  });
+
+});
 
 });
