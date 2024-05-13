@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>원페이지 레이아웃(스크롤, 마우스 휠이벤트)_가로</title>
+  <!-- 초기화 -->
+  <link href="./css/reset.css" type="text/css" rel="stylesheet">
+  <!-- 레이아웃 -->
+  <link href="./css/layout2.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header>
+    <h1>상단로고</h1>
+    <nav class="gnb">
+      <ul>
+        <li><a href="#sect1" title="미니쿠퍼" class="on">Mini Cooper</a></li>
+        <li><a href="#sect2" title="테슬라">Tesla</a></li>
+        <li><a href="#sect3" title="람보르기니">Lamborghini</a></li>
+        <li><a href="#sect4" title="포르쉐">Porsche</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 메인 -->
+  <main id="cont">
+    <section id="sect1">
+      <h2>Mini Cooper</h2>
+      <p>Mini Cooper 미니는 독일의 자동차 제조사인 BMW의 전륜구동, 상시 4륜구동 해치백형 쿠페를 말한다. 영국의 자동차 제조사 브리티쉬 모터의 자동차 브랜드인 미니를 BMW가 인수한 후 새롭게 설계하여 출시했다. 2001년 4월부터 영국 옥스퍼드셔 주 옥스퍼드 공장에서 생산하고 있으며, 2세대부터 모델 라인업이 증가했다.</p>
+    </section>
+
+    <section id="sect2">
+      <h2>Tesla</h2>
+      <p>Tesla 테슬라 주식회사는 미국의 전기자동차 회사이다. 2003년, 마틴 에버하드와 마크 타페닝가 창업했다. 2004년 페이팔의 최고경영자이던 일론 머스크가 투자자로 참여했다. 회사 이름은 물리학자이자 전기공학자인 니콜라 테슬라의 이름을 따서 지었다. 2010년 6월 나스닥에 상장되었다</p>
+    </section>
+
+    <section id="sect3">
+      <h2>Lamborghini</h2>
+      <p>회사의 철칙은 페라리보다 빠른 차를 만들자이다. 페라리가 GT 계열 스포츠카[2]를 추구한다면 람보르기니는 말그대로 타협이라곤 일절없는 퓨어 스포츠카를 지향한다. 아이러니한건 창업주 페루초 람보르기니는 튼튼하고 편안한 GT카를 좋아했다는 것. 페라리의 잦은 고장에 질려서 직접 차를 만들 정도였으니까..</p>  
+    </section>
+    
+    <section id="sect4">
+      <h2>Porsche</h2>
+      <p>주식회사 포르쉐는 독일의 고급 스포츠카 전문 제조 기업이다. 포르쉐 자동차 제조사인 포르쉐 AG와 폭스바겐 AG가 대주주이다. 독일 바덴뷔르템베르크 주 슈투트가르트에 본사가 있다. 1931년 오스트리아-헝가리 제국의 기술자였던 공학박사 페르디난트 포르셰에 의해 설립되었다. 주로 고급 스포츠카를 만들며, SUV와 고급 세단 시장에도 진출했다</p>
+    </section>
+
+  <!-- 푸터 -->
+  <footer>
+    <address>Copyright&copy;2024 가로스크롤 레이아웃 allrights reserved.</address>
+  </footer>
+
+  <!-- 가로스크롤값 출력을 위한 요소 -->
+  <span id="sPos"></span>
+
+  <!-- 제이쿼리 라이브러리 연결 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- 제이쿼리 스크롤 레이아웃  -->
+  <script src="./script/layout2.js"></script>
+
+</body>
+</html>
