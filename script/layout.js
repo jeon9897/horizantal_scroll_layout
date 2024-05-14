@@ -59,7 +59,7 @@ $(window).scroll(function(){
           }
           // 마지막 article보다 더 오른쪽으로 이동하려고 하는 경우 알림창 출력
           else {
-              alert("마지막 페이지 입니다.");
+              //alert("마지막 페이지 입니다.");
               return false;
           }
       }
@@ -74,7 +74,7 @@ $(window).scroll(function(){
           }
           // 첫번째 article보다 더 위로 이동하려고 하는 경우 알림창 출력
           else {
-              alert("첫번째 페이지 입니다.");
+              //alert("첫번째 페이지 입니다.");
               return false;
           }
       }

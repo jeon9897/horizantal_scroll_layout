@@ -1,10 +1,21 @@
 $(document).ready(function(){
 
-// 1. 세로스크롤 값 출력하기
-$(window).scroll(function(){
-  let sposL = $(this).scrollTop();
-  $('#sPos').html(sposL);
-});
+  // 1. 세로스크롤 값 출력하기
+  $(window).scroll(function(){
+    let scrT = $(this).scrollTop();
+    $('#sPos').html(scrT);
+
+    $('nav li a').removeClass('on');
+
+    $('section').each(function(i){
+      let top=$(this).offset().top;
+
+      if(scrT>= top ){
+        $('nav li a').removeClass('on');
+        $('nav li').eq(i).find('a').addClass('on');
+      }
+    });
+  });
 
 // 2. 메뉴 클릭시 해당 section이 부드럽게 애니메이션 되면서 스크롤됨.
   $('nav li a').click(function(){
@@ -60,7 +71,7 @@ $(window).scroll(function(){
           }
           // 마지막 article보다 더 오른쪽으로 이동하려고 하는 경우 알림창 출력
           else {
-              alert("마지막 페이지 입니다.");
+              //alert("마지막 페이지 입니다.");
               return false;
           }
       }
@@ -75,7 +86,7 @@ $(window).scroll(function(){
           }
           // 첫번째 article보다 더 위로 이동하려고 하는 경우 알림창 출력
           else {
-              alert("첫번째 페이지 입니다.");
+              //alert("첫번째 페이지 입니다.");
               return false;
           }
       }
