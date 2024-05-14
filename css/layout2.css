@@ -70,11 +70,11 @@ header h1{
 #cont section p{
   position:absolute;
   left:180px;top:250px;
-  background-color:rgba(255,255,255,.9);
   width:400px;font-size:15px;
   padding:10px;line-height:30px;
   text-align:justify;
   text-indent:10px;
+  color:#fff;
 }
 #cont section p:first-letter{
   font-weight:bold;font-size:30px;

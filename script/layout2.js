@@ -5,12 +5,53 @@ $(document).ready(function(){
     let scrT = $(this).scrollTop();
     $('#sPos').html(scrT);
 
+    //내비게이션 서식 적용
+
+    // 1. 모든 메뉴서식을 제거하고
     $('nav li a').removeClass('on');
 
-    $('section').each(function(i){
-      let top=$(this).offset().top;
+    //2. 해당 section이 보이면(위로 올라오면)
+    //해상 section메뉴에 addClass한다.
+    //$('nav li').eq(n).find('a').addClass('on');
 
-      if(scrT>= top ){
+    //각 section별 브라우저 상단으로부터 떨어져있는 값
+    // let sec1_Offset = $('#sect1').offset().top;
+    // let sec2_Offset = $('#sect2').offset().top;
+    // let sec3_Offset = $('#sect3').offset().top;
+    // let sec4_Offset = $('#sect4').offset().top;
+
+    // console.log(sec1_Offset, sec2_Offset, sec3_Offset, sec4_Offset);//0, 902, 1804, 2706
+
+    //방법1. 조건문을 통해 범위를 선정하여 a요소에 각각 해당 서식을 적용
+    // if(scrT>=sec1_Offset&&scrT<sec2_Offset){ //0~902
+    //   $('nav li').eq(0).find('a').addClass('on');
+    // }else if(scrT>=sec2_Offset&&scrT<sec3_Offset){//902~1804
+    //   $('nav li').eq(1).find('a').addClass('on');
+    // }else if(scrT>=sec3_Offset&&scrT<sec4_Offset){//1804~2706
+    //   $('nav li').eq(2).find('a').addClass('on');
+    // }else if(scrT>=sec4_Offset){ //2706이상
+    //   $('nav li').eq(3).find('a').addClass('on');
+    // }
+
+    //방법2. 
+    // let h = $('section').height(); //902
+    // console.log(h); //902
+
+    // if(scrT>=h*0&&scrT<h*1){//0~902
+    //   $('nav li').eq(0).find('a').addClass('on');
+    // }else if(scrT>=h*1&&scrT<h*2){
+    //   $('nav li').eq(1).find('a').addClass('on');
+    // }else if(scrT>=h*2&&scrT<h*3){
+    //   $('nav li').eq(2).find('a').addClass('on');
+    // }else if(scrT>=h*3){
+    //   $('nav li').eq(3).find('a').addClass('on');
+    // }
+
+    //방법3. each함수
+    $('section').each(function(i){ //section 각각 n번째에 해당기능을 적용
+      let top = $(this).offset().top;
+
+      if(scrT>=top){
         $('nav li a').removeClass('on');
         $('nav li').eq(i).find('a').addClass('on');
       }

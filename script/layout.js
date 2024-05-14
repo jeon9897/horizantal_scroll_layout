@@ -4,6 +4,16 @@ $(document).ready(function(){
 $(window).scroll(function(){
   let sposL = $(this).scrollLeft();
   $('#sPos').html(sposL);
+
+  $('section').each(function(i){ //section 각각 n번째에 해당기능을 적용
+    let left = $(this).offset().left;
+
+    if(sposL>=left){
+      $('nav li a').removeClass('on');
+      $('nav li').eq(i).find('a').addClass('on');
+    }
+  });
+
 });
 
 // 2. 메뉴 클릭시 해당 section이 부드럽게 애니메이션 되면서 스크롤됨.
